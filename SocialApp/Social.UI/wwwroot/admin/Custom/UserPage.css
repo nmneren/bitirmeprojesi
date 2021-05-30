@@ -1,0 +1,43 @@
+﻿#headerdiv {
+    margin-left: 100px;
+}
+
+div#imgdiv {
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+#listdiv li {
+    font-family: sans-serif;
+    color: #000000;
+    margin-top: 5px;
+    line-height: 1;
+    font-size: 18px;
+}
+
+
+#navdiv {
+    
+}
+
+#navdiv ul {
+    text-align:center;
+    margin-left:25%;
+
+}
+
+    #navdiv ul li a {
+        border: hidden;
+        font-size: 20px;
+    }
+
+    #navdiv ul li a:hover {
+        background-color:black;
+        color:white;
+    }
+
+        #navdiv ul li a.active{
+            background-color: black;
+            color: white;
+        }

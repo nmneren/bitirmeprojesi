@@ -1,0 +1,51 @@
+﻿article {
+    border: solid;
+    border-width: 0.5px;
+    margin-left: 25%;
+    margin-top: 2%;
+    width: 585px;
+}
+
+#divheader {
+    margin: 5px 5px 5px 5px;
+}
+
+div.image {
+    margin: 10px 10px 10px 10px;
+}
+
+#divimg {
+    margin: 10px 0px 0px 0px;
+    border-bottom: solid;
+    border-width: 0.5px;
+}
+
+
+#divcontent {
+    margin: 10px 30px 30px 30px;
+}
+
+#date {
+    text-align: right;
+    margin: 4px 0px 0px 0px;
+}
+
+#pcontent {
+    font-size: 17px;
+    color: black;
+}
+
+    #pcontent a {
+        color: black;
+    }
+
+#divbutton {
+    margin: 10px 10px 10px 10px;
+    border-top: solid;
+    border-width: 0.5px;
+    text-align: right;
+}
+
+    #divbutton a {
+        margin: 10px 10px 0px 0px;
+    }

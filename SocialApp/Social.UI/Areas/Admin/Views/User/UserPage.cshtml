@@ -1,0 +1,96 @@
+﻿@model Tuple<User, int, int>
+@{
+    ViewData["Title"] = "UserPage";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section UserPageCss {
+    <link href="~/admin/Custom/UserPage.css" rel="stylesheet" />
+}
+
+<div class="content" style="margin-top:50px;">
+    <div id="headerdiv" class="row">
+        <div class="col-md-3" style="text-align:center;">
+            <img src="@Model.Item1.ProfileImagePath" alt="" width="150" height="150" class="rounded-circle">
+        </div>
+        <div id="listdiv" class="col-md-6">
+            <ul class="list-inline">
+                <li class="list-inline-item"><h2>@Model.Item1.UserName</h2></li>
+                @if (Model.Item1.Status == Status.Active)
+                {
+                    <li class="list-inline-item"><a class="btn btn-danger" asp-area="Admin" asp-controller="User" asp-action="GetPassiveUser" asp-route-id="@Model.Item1.ID">Askıya Al</a></li>
+                }
+                else
+                {
+                    <li class="list-inline-item"><a class="btn btn-primary" asp-area="Admin" asp-controller="User" asp-action="GetActiveUser" asp-route-id="@Model.Item1.ID">Aktif Et</a></li>
+                }
+
+                <li class="list-inline-item"><a class="btn btn-danger" asp-area="Admin" asp-controller="User" asp-action="UserDelete" asp-route-id="@Model.Item1.ID">Hesabı Sil</a></li>
+            </ul>
+            <ul class="list-inline">
+                <li class="list-inline-item">@Model.Item1.Images.Count Gönderi</li>
+                <li class="list-inline-item"><a asp-area="Admin" asp-controller="Following" asp-action="Followed" asp-route-id="@Model.Item1.ID">@Model.Item2 Takipçi</a></li>
+                <li class="list-inline-item"><a asp-area="Admin" asp-controller="Following" asp-action="Follower" asp-route-id="@Model.Item1.ID">@Model.Item3 Takip</a></li>
+            </ul>
+            <ul class="list-unstyled">
+                <li><h3>@Model.Item1.Name</h3></li>
+                <li><a href="https://@Model.Item1.Url">@Model.Item1.Url</a></li>
+                <li>@Model.Item1.Biography</li>
+            </ul>
+        </div>
+    </div>
+    <hr />
+    <div class="col-md-12" id="navdiv">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item col-md-4" role="presentation">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Gönderi</a>
+            </li>
+            <li class="nav-item col-md-4" role="presentation">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Arşiv</a>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="row">
+                @foreach (var img in Model.Item1.Images.OrderByDescending(x => x.CreatedDate))
+                {
+                    @if (img.Status == Status.Active)
+                    {
+                        <div class="col-md-3" id="imgdiv">
+                            <a asp-controller="Image" asp-action="OneImg" asp-route-id="@img.ID">
+                                <img src="@img.ImagePath" alt="" width="350" height="350" >
+                            </a>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+        <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="row">
+
+                @foreach (var img in Model.Item1.Images.OrderByDescending(x => x.CreatedDate))
+                {
+                    @if (img.Status == Status.Passive)
+                    {
+                        <div class="col col-md-3" id="imgdiv">
+                            <a asp-controller="Image" asp-action="OneImg" asp-route-id="@img.ID">
+                                <img src="@img.ImagePath" alt="" width="350" height="350">
+                            </a>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    $('#myTab a').on('click', function (event) {
+        event.preventDefault()
+        $(this).tab('show')
+    })
+</script>

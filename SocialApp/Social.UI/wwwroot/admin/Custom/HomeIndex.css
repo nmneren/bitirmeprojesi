@@ -1,0 +1,29 @@
+﻿article {
+    border: solid;
+    border-width: 0.5px;
+    margin-top: 2%;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+}
+
+    article a {
+        display: block;
+        border-color: black;
+    }
+
+div image {
+    margin: 10px 10px 10px 10px;
+}
+
+#divimg {
+    margin: 10px 0px 10px 0px;
+}
+
+#divcontent {
+    margin: 30px 30px 30px 30px;
+}
+
+    #divcontent a h4 {
+        margin-bottom: 5px;
+    }

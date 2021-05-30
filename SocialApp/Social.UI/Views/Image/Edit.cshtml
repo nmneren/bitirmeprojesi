@@ -1,0 +1,50 @@
+﻿@model Image
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section ImgEditCss {
+    <link href="~/Custom/ImgEdit.css" rel="stylesheet" />
+}
+
+<div class="row">
+    <article>
+        <div id="divheader">
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger">@TempData["Error"]</div>
+            }
+
+            <div class="item d-flex align-items-center">
+                <div class="image">
+                    <img src="@User.Claims.FirstOrDefault(c => c.Type.EndsWith("Image")).Value" alt="..." class="rounded-circle" width="50" height="50">
+                </div>
+                <div class="text">
+                    <h4 class="h4">@User.Claims.FirstOrDefault(c => c.Type.EndsWith("UserName")).Value</h4>
+                </div>
+            </div>
+        </div>
+        <div id="divimg">
+            <a>
+                <img src="@Model.ImagePath" alt="Lights">
+            </a>
+        </div>
+        <div id="divcontent">
+            <form method="post" asp-controller="Image" asp-action="Edit">
+                <input type="hidden" asp-for="ID" />
+                <input type="hidden" asp-for="UserId" />
+
+                <div class="form-group">
+                    <input type="text" asp-for="Content" class="form-control" placeholder="Açıklama Yazınız..." />
+                </div>
+                <div id="divbutton">
+                    <a class="btn btn-danger" asp-controller="Image" asp-action="Delete" asp-route-id="@Model.ID">Sil</a>
+                    <input id="divinput" type="submit" class="btn btn-success" value="Güncelle" />
+                </div>
+            </form>
+        </div>
+    </article>
+</div>
+
+

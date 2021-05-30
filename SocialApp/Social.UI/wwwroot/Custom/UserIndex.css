@@ -1,0 +1,64 @@
+﻿#divmain {
+    padding: 50px 0px 50px 0px;
+}
+
+
+#headerdiv {
+    margin-left: 100px;
+}
+
+    #headerdiv li {
+        font-family: sans-serif;
+        color: #000000;
+        margin-top: 5px;
+        line-height: 1;
+        font-size: 18px;
+    }
+
+#imgdiv {
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+
+#navdiv ul {
+    border: 0px;
+}
+
+    #navdiv ul li a {
+        font-size: 15px;
+    }
+
+        #navdiv ul li a:hover {
+            color: white;
+            background-color: black;
+        }
+
+#divprofile {
+    text-align: center;
+}
+
+
+#list1 a:hover {
+    background-color:black;
+    color:white;
+}
+
+#list2 a {
+    color: black;
+}
+
+#list3 a {
+    color: black;
+}
+
+#list2 a:hover {
+    color: #808080;
+}
+
+#list3 a:hover {
+    color: #808080;
+}
+
+#list3 li {
+    margin-bottom: 7px;
+}

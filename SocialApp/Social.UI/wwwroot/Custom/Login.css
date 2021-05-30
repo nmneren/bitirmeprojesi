@@ -1,0 +1,47 @@
+﻿#divmain {
+    text-align: center;
+    margin-top: 45px;
+}
+
+#divcontent {
+    min-width: 100%;
+}
+
+    #divcontent h1 {
+        font-family: serif;
+        font-size: 45px;
+    }
+
+    #divcontent p {
+        font-size: 20px;
+    }
+
+#divform {
+    margin-top: 30px;
+}
+
+    #divform input:hover{
+        border: 1px solid black;
+    }
+
+    #divform button {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+        #divform button:hover {
+            background-color: black;
+            color: white;
+        }
+
+    #divform a {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+    }
+
+        #divform a:hover {
+            background-color: black;
+            color: white;
+        }

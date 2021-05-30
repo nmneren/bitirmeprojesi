@@ -1,0 +1,26 @@
+-SOCIAL APP-
+
+Not: Hocam sizin verdiğiniz temlate üzerinde css değişiklikler yaparak tamamladım siteyi kendi custom css dosyalarımıda yazdım admin için ayrı 
+normal için ayrı folderlara yazdım.
+
+Içerik ->
+
+	Username ile Admin olarak belirlediğimiz Userin uygun gördüğü Userin hesabını askıya alabildiği isterse o hesabı
+silebildiği ve uygun gördüğü resimleride silebildiği diğer Userların resimlerini yüklediği, başka Userlar ile takipleşme 
+olaylarını yapabildiği, yüklediği resimlerden istediklerini arşive kaldırıp diğer Userların görmesini engellediği,
+profilde istediği bir sitenin urlni, kendi biyografisini ekleyebildiği ve güncellemeler yapabildiği, istediğinde 
+şifresini değiştirdiği ve hesabını silebildiği bir projedir.
+
+Proje Katmanları ->
+
+	- Core -> İçerisinde Entity, Map ve Service bölümleri ile diğer katmanlara yardım ettiği onların temen Interface
+BaseClasslarını Enumlarını barındırdığı çekirdek katmandır.
+
+	- Model -> İçerisinde Databaseye bağlandığımız, tablolarımızı temsil edecek modellerimizi oluşturduğumuz ve o tablolardaki
+database eklemeden önceki kısıtlamalarını yazdığımız katmandır.
+
+	- Services -> UI kısmında kullanacağımız Database sorugularımızı generic olarak yazdıgımız katmandır. Bu sayede orada
+yazdığımız metotlar ile database işlemlerimizi kısa şekilde yapıyoruz.
+
+	- UI -> Kullanıcın gördüğü sayfalarımızı kantrollerimizi yazdığımız katmandır. Görünüş olarak hangi sayfada neler olacak
+kimler girebilecek hangi sayfada kullanıcılar neler yapabilcek belirlediğimiz katmandır.

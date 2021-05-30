@@ -1,0 +1,21 @@
+﻿@model List<Image>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="superbox">
+        @foreach (var item in Model.OrderByDescending(x=> x.CreatedDate))
+        {
+            <div class="superbox-list">
+                <a asp-area="Admin" asp-controller="Image" asp-action="OneImg" asp-route-id="@item.ID">
+                    <img src="@item.ImagePath" alt="" class="superbox-img">
+                </a>
+            </div>
+        }
+
+    </div>
+
+@section AllImgCss {
+    <link href="~/admin/Custom/AllImg.css" rel="stylesheet" />
+}

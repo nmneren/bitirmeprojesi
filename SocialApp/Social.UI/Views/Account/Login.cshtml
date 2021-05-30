@@ -1,0 +1,79 @@
+﻿@model User
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Admin Panel</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="~/admin/assets/images/favicon.ico">
+    <link rel="stylesheet" href="~/admin/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="~/admin/assets/css/vendor/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="~/admin/assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="~/admin/assets/css/vendor/themify-icons.css">
+    <link rel="stylesheet" href="~/admin/assets/css/vendor/cryptocurrency-icons.css">
+    <link rel="stylesheet" href="~/admin/assets/css/plugins/plugins.css">
+    <link rel="stylesheet" href="~/admin/assets/css/helper.css">
+    <link rel="stylesheet" href="~/admin/assets/css/style.css">
+    <link rel="stylesheet" href="~/Custom/Login.css"  />
+
+</head>
+<body>
+    <div class="main-wrapper">
+        <div id="divmain" class="row">
+            <div class="offset-4 col-md-4">
+                <div id="divcontent" class="content">
+                    @if (TempData["Message"] != null)
+                    {
+                        <div class="alert alert-danger" role="alert" style=" text-align:center; font-size:18px;">
+                            @TempData["Message"]
+                        </div>
+                    }
+
+                    @if (TempData["Success"] != null)
+                    {
+                        <div class="alert alert-success" role="alert" style=" text-align:center; font-size:18px;">
+                            @TempData["Success"]
+                        </div>
+                    }
+
+                    @if (TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger" role="alert" style=" text-align:center; font-size:18px;">
+                            @TempData["Error"]
+                        </div>
+                    }
+
+                    <h1>SOCIAL</h1>
+                    <p>Sosyal Medya Sitemize Hoşgeldiniz.</p>
+                </div>
+                <div id="divform" class="offset-1 col-md-10 " >
+                    <form asp-controller="Account" asp-action="Login" asp-area="" method="post">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Kullanıcı Adı" asp-for="UserName" required><br />
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" placeholder="Password" asp-for="Password" required><br />
+                        </div>
+                        <div class="form-group">
+                            <button class="button button-primary button-outline">Giriş Yap</button>
+                            <a asp-controller="User" asp-action="Add" asp-area="" class="button button-primary button-outline">Yeni Kayıt</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/vendor/modernizr-3.6.0.min.js"></script>
+    <script src="~/js/vendor/jquery-3.3.1.min.js"></script>
+    <script src="~/js/vendor/popper.min.js"></script>
+    <script src="~/js/vendor/bootstrap.min.js"></script>
+    <script src="~/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="~/js/plugins/tippy4.min.js.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>

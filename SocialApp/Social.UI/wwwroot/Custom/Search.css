@@ -1,0 +1,30 @@
+﻿img.profile-photo-lg {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
+
+#inputSearch {
+    margin-left: 25%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+}
+
+#Userlist {
+    margin-left: 25%;
+}
+
+.text-muted {
+    font-size: 15px;
+}
+    #myInput:hover {
+        border-color: black;
+    }
+
+.list-group-item a {
+    color: black;
+}
+
+    .list-group-item a:hover {
+        color: #808080;
+    }

@@ -1,0 +1,14 @@
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\bin\Debug\netcoreapp3.1\Social.Service.deps.json
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\bin\Debug\netcoreapp3.1\Social.Service.dll
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\bin\Debug\netcoreapp3.1\Social.Service.pdb
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\bin\Debug\netcoreapp3.1\Social.Core.dll
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\bin\Debug\netcoreapp3.1\Social.Model.dll
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\bin\Debug\netcoreapp3.1\Social.Model.pdb
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\bin\Debug\netcoreapp3.1\Social.Core.pdb
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\obj\Debug\netcoreapp3.1\Social.Service.csprojAssemblyReference.cache
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\obj\Debug\netcoreapp3.1\Social.Service.AssemblyInfoInputs.cache
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\obj\Debug\netcoreapp3.1\Social.Service.AssemblyInfo.cs
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\obj\Debug\netcoreapp3.1\Social.Service.csproj.CoreCompileInputs.cache
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\obj\Debug\netcoreapp3.1\Social.Service.csproj.CopyComplete
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\obj\Debug\netcoreapp3.1\Social.Service.dll
+C:\Users\by_nu\Desktop\SocialApp\Social.Service\obj\Debug\netcoreapp3.1\Social.Service.pdb

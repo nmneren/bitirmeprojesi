@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BlogSoft</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" type="text/css" href="~/blog/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/blog/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="~/blog/css/line-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="~/blog/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="~/blog/js/lib/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/blog/js/lib/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="~/blog/css/style.css">
+    <link rel="stylesheet" type="text/css" href="~/blog/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="~/blog/css/color.css">
+    <link rel="stylesheet" type="text/css" href="~/blog/css/Custom.css" />
+    <link rel="stylesheet" type="text/css" href="~/Custom/Layout.css"  />
+
+    @RenderSection("followingCss", false)
+    @RenderSection("SearchCss", false)
+    @RenderSection("HomeIndexCss", false)
+    @RenderSection("OneImgCss", false)
+    @RenderSection("ImgEditCss", false)
+    @RenderSection("UserIndexCss", false)
+    @RenderSection("MyPostCss", false)
+    @RenderSection("ChangePasswordCss", false)
+    @RenderSection("ConfirmDelete", false)
+    @RenderSection("UserEditCss", false)
+    @RenderSection("DiscoverCss", false)
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div id="container">
+                <div class="navbar navbar-light">
+                    <div class="navbar-left">
+                        <a class="navbar-brand" asp-controller="Home" asp-action="Index" asp-area="" style="font-family:serif;">SOCIAL</a>
+                    </div>
+                    <div class="navbar-right">
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="navbar-brand" asp-controller="Home" asp-action="Index" asp-area=""><span class="la la-home"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand" asp-controller="Home" asp-action="Discover" asp-area=""><span class="la la-compass"></span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="navbar-brand" asp-controller="User" asp-action="UserSearch" asp-area=""><span class="la la-search"></span></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown" href="#" role="link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="user">
+                                        <span class="avatar">
+                                            <img src="@User.Claims.FirstOrDefault(c => c.Type.EndsWith("Image")).Value.ToString()" alt="" width="35" height="35" class="rounded-circle">
+                                        </span>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown ">
+                                    @if (User.Claims.FirstOrDefault(c => c.Type.EndsWith("role")).Value == "Admin")
+                                    {
+                                        <a class="dropdown-item" asp-controller="Home" asp-action="Index" asp-area="Admin">Admin</a>
+                                    }
+                                    <a class="dropdown-item" asp-controller="User" asp-action="Index" asp-area="" asp-route-id="@User.Claims.FirstOrDefault(c => c.Type.EndsWith("ID")).Value">Profil</a>
+                                    <a class="dropdown-item" asp-controller="User" asp-action="Edit" asp-area="" asp-route-id="@User.Claims.FirstOrDefault(c => c.Type.EndsWith("ID")).Value">Ayarlar</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" asp-controller="Account" asp-action="Logout" asp-area=""><i class="zmdi zmdi-account"></i>Çıkış Yap</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="renderbody" class="main-content pb-0">
+            <div class="container">
+                @RenderBody()
+            </div>
+        </section>
+
+        <section class="bottom-strip">
+            <div class="container">
+                <p>©2021 Social. Resim Paylaşma Sitesi.</p>
+            </div>
+        </section>
+
+    </div>
+
+
+    <script src="~/blog/js/jquery.min.js"></script>
+    <script src="~/blog/js/popper.js"></script>
+    <script src="~/blog/js/bootstrap.min.js"></script>
+    <script src="~/blog/js/lib/slick/slick.js"></script>
+    <script src="~/blog/js/script.js"></script>
+</body>
+</html>

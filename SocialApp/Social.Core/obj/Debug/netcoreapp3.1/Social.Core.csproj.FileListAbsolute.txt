@@ -1,0 +1,9 @@
+C:\Users\by_nu\Desktop\SocialApp\Social.Core\bin\Debug\netcoreapp3.1\Social.Core.deps.json
+C:\Users\by_nu\Desktop\SocialApp\Social.Core\bin\Debug\netcoreapp3.1\Social.Core.dll
+C:\Users\by_nu\Desktop\SocialApp\Social.Core\bin\Debug\netcoreapp3.1\Social.Core.pdb
+C:\Users\by_nu\Desktop\SocialApp\Social.Core\obj\Debug\netcoreapp3.1\Social.Core.csprojAssemblyReference.cache
+C:\Users\by_nu\Desktop\SocialApp\Social.Core\obj\Debug\netcoreapp3.1\Social.Core.AssemblyInfoInputs.cache
+C:\Users\by_nu\Desktop\SocialApp\Social.Core\obj\Debug\netcoreapp3.1\Social.Core.AssemblyInfo.cs
+C:\Users\by_nu\Desktop\SocialApp\Social.Core\obj\Debug\netcoreapp3.1\Social.Core.csproj.CoreCompileInputs.cache
+C:\Users\by_nu\Desktop\SocialApp\Social.Core\obj\Debug\netcoreapp3.1\Social.Core.dll
+C:\Users\by_nu\Desktop\SocialApp\Social.Core\obj\Debug\netcoreapp3.1\Social.Core.pdb

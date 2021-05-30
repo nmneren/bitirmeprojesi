@@ -1,0 +1,52 @@
+﻿@model Image
+@{
+    ViewData["Title"] = "MyPost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section MyPostCss{
+    <link href="~/Custom/MyPost.css" rel="stylesheet" />
+}
+
+<div class="content">
+    <div class="col-md-5" id="contentdiv">
+
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger">@TempData["Error"]</div>
+        }
+
+        <div id="divimg">
+            <div class="item d-flex align-items-center">
+                <div class="image">
+                    <img src="@User.Claims.FirstOrDefault(c => c.Type.EndsWith("Image")).Value" alt="..." class="rounded-circle" width="90" height="90">
+                </div>
+                <div class="text">
+                    <h3 class="h3">@User.Claims.FirstOrDefault(c => c.Type.EndsWith("UserName")).Value</h3>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <form asp-controller="Image" asp-action="MyPost" method="post" class="form-horizontal" enctype="multipart/form-data">
+
+            <input type="hidden" asp-for="ID" value="" />
+
+            <input type="hidden" asp-for="UserId" value="@User.Claims.FirstOrDefault(c => c.Type.EndsWith("ID")).Value" />
+
+            <div class="form-group">
+                <label>Resim Dosyası Ekleyin</label>
+                <input class="form-control" type="file" name="files" required>
+            </div>
+
+            <div class="form-group">
+                <label>Açıklama</label>
+                <input type="text" asp-for="Content" class="form-control" required />
+            </div>
+
+            <div id="divbutton" class="form-group">
+                <input type="submit" value="Ekle" class="form-control btn btn-primary col-md-3" />
+            </div>
+            @Html.ValidationSummary()
+        </form>
+    </div>
+</div>

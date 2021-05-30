@@ -1,0 +1,52 @@
+﻿@model List<User>
+
+@{
+    ViewData["Title"] = "Follower";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section followingCss{
+    <link href="~/Custom/Following.css" rel="stylesheet" />
+}
+
+@if (Model != null)
+{
+    <div class="row">
+        <div id="contentdiv" class="col-md-6">
+            <div class="articles card">
+                <div class="card-header d-flex align-items-center">
+                    <h2 class="h3">Takip Ettikleri (@Model.Count Kişi) </h2>
+                </div>
+                @foreach (var item in Model)
+                {
+                    <div class="card-body no-padding">
+                        <div class="item d-flex align-items-center">
+                            <div class="image">
+                                <img src="@item.ProfileImagePath" alt="..." class=" rounded-circle" width="80" height="80">
+                            </div>
+                            <div class="text">
+                                <a asp-controller="User" asp-action="Index" asp-route-id="@item.ID">
+                                    <h3 class="h3">@item.UserName</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row">
+        <div id="contentdiv" class="col-md-6">
+            <div class="articles card">
+                <div class="card-header d-flex align-items-center">
+                    <h2 class="h3">Takipçiler (0 Kişi)</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+}

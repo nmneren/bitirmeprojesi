@@ -1,0 +1,20 @@
+﻿@model List<Image>
+@{
+    ViewData["Title"] = "Discover";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section DiscoverCss {
+    <link href="~/Custom/Discover.css" rel="stylesheet" />
+}
+
+<div class="superbox">
+    @foreach (var item in Model.OrderByDescending(x => x.CreatedDate))
+    {
+        <div class="superbox-list">
+            <a asp-area="" asp-controller="Image" asp-action="OneImg" asp-route-id="@item.ID">
+                <img src="@item.ImagePath" alt="" class="superbox-img">
+            </a>
+        </div>
+    }
+</div>

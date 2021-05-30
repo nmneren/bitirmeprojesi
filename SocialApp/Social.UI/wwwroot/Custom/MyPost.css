@@ -1,0 +1,17 @@
+﻿div#contentdiv {
+    margin-top: 5%;
+    margin:auto;
+}
+
+#divimg {
+    margin: 40px 0px 40px 0px;
+    text-align: center;
+}
+
+div.image {
+    margin: 10px 10px 10px 25%;
+}
+
+#divbutton {
+    text-align: right;
+}

@@ -1,0 +1,15 @@
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\bin\Debug\netcoreapp3.1\Social.Core.dll
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\obj\Debug\netcoreapp3.1\Social.Model.csprojAssemblyReference.cache
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\obj\Debug\netcoreapp3.1\Social.Model.AssemblyInfoInputs.cache
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\obj\Debug\netcoreapp3.1\Social.Model.AssemblyInfo.cs
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\obj\Debug\netcoreapp3.1\Social.Model.csproj.CoreCompileInputs.cache
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\bin\Debug\netcoreapp3.1\Social.Model.deps.json
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\bin\Debug\netcoreapp3.1\Social.Model.runtimeconfig.json
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\bin\Debug\netcoreapp3.1\Social.Model.runtimeconfig.dev.json
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\bin\Debug\netcoreapp3.1\Social.Model.dll
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\bin\Debug\netcoreapp3.1\Social.Model.pdb
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\bin\Debug\netcoreapp3.1\Social.Core.pdb
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\obj\Debug\netcoreapp3.1\Social.Model.csproj.CopyComplete
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\obj\Debug\netcoreapp3.1\Social.Model.dll
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\obj\Debug\netcoreapp3.1\Social.Model.pdb
+C:\Users\by_nu\Desktop\SocialApp\Social.Model\obj\Debug\netcoreapp3.1\Social.Model.genruntimeconfig.cache

@@ -1,0 +1,47 @@
+﻿@model List<User>
+
+@{
+    ViewData["Title"] = "UserSearch";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+<div class="row">
+    <div id="inputSearch" class="col-md-6">
+        <div class="input-group rounded">
+            <input id="myInput" type="text" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        </div>
+    </div>
+
+    <div id="Userlist" class="col-md-6">
+        <ul class="list-group" id="myList">
+            @foreach (var item in Model)
+            {
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="@item.ProfileImagePath" alt="user" class="profile-photo-lg" width="50" height="50">
+                        </div>
+                        <div class="col-md-8">
+                            <br />
+                            <h3><a asp-controller="User" asp-action="Index" asp-route-id="@item.ID" class="profile-link">@item.UserName</a></h3>
+                            <p class="text-muted">@item.Name</p>
+                        </div>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+
+
+
+@section SearchCss {
+    <link href="~/Custom/Search.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/UserSearch.js"></script>
+}

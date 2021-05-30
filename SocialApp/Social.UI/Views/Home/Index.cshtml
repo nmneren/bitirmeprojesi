@@ -1,0 +1,46 @@
+﻿@model List<Image>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@section HomeIndexCss {
+    <link href="~/Custom/HomeIndex.css" rel="stylesheet" />
+}
+
+
+<div class="content">
+    @foreach (var item in Model.OrderByDescending(x => x.CreatedDate))
+    {
+        <article>
+            <div id="divheader">
+                <div class="item d-flex align-items-center">
+                    <div class="image">
+                        <img src="@item.Users.ProfileImagePath" alt="..." class="rounded-circle" width="50" height="50">
+                    </div>
+                    <div class="text">
+                        <a asp-controller="User" asp-action="Index" asp-route-id="@item.UserId">
+                            <h4 class="h4">@item.Users.UserName</h4>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div id="divimg">
+                <a>
+                    <img src="@item.ImagePath" alt="Lights">
+                </a>
+            </div>
+            <div id="divcontent">
+                <p id="date">@item.CreatedDate.ToString().Split(" ")[0]</p>
+                <p id="pcontent">
+                    <b>- <a asp-controller="User" asp-action="Index" asp-route-id="@item.UserId">@item.Users.UserName</a></b> : @item.Content
+                </p>
+            </div>
+        </article>
+    }
+</div>
+
+
+
+

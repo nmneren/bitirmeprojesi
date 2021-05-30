@@ -1,0 +1,41 @@
+﻿@model Image
+
+@{
+    ViewData["Title"] = "OneImg";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <article>
+        <div id="divheader">
+            <div class="item d-flex align-items-center">
+                <div class="image">
+                    <img src="@Model.Users.ProfileImagePath" alt="..." class=" rounded-circle" width="50" height="50">
+                </div>
+                <div class="text">
+                    <a asp-area="Admin" asp-controller="User" asp-action="UserPage" asp-route-id="@Model.UserId">
+                        <h4 class="h4">@Model.Users.UserName</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="divimg">
+            <img src="@Model.ImagePath" alt="Lights" style="width:100%">
+        </div>
+        <div id="divcontent">
+            <p id="date">@Model.CreatedDate.ToString().Split(" ")[0]</p>
+            <p id="pcontent">
+                <b>- <a asp-area="Admin" asp-controller="User" asp-action="UserPage" asp-route-id="@Model.UserId">@Model.Users.UserName</a></b> : @Model.Content
+            </p>
+        </div>
+        <div id="divbutton">
+            <a class="btn btn-danger" asp-area="Admin" asp-controller="Image" asp-action="Delete" asp-route-id="@Model.ID">Resmi Sil</a>
+        </div>
+    </article>
+</div>
+
+
+@section OneImgCss {
+    <link href="~/admin/Custom/OneImg.css" rel="stylesheet" />
+}
+

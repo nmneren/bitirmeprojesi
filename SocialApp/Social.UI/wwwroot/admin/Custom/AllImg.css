@@ -1,0 +1,13 @@
+﻿body {
+    margin-top: 20px;
+}
+
+.superbox-list {
+    display: inline-block;
+    margin: 5px 5px 5px 5px;
+}
+
+.superbox-img {
+    width:300px;
+    height:300px;
+}

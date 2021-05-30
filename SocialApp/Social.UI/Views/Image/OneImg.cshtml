@@ -1,0 +1,64 @@
+﻿@model Image
+
+@{
+    ViewData["Title"] = "OneImg";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section OneImgCss {
+    <link href="~/Custom/OneImg.css" rel="stylesheet" />
+}
+
+<div id="content" class="row">
+    <article>
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success">@TempData["Success"]</div>
+        }
+
+        <div id="divheader">
+
+            <div class="item d-flex align-items-center">
+                <div class="image">
+                    <img src="@Model.Users.ProfileImagePath" alt="..." class=" rounded-circle" width="50" height="50">
+                </div>
+                <div class="text">
+                    <a asp-controller="User" asp-action="Index" asp-route-id="@Model.UserId">
+                        <h4 class="h4">@Model.Users.UserName</h4>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div id="divimg">
+            <a>
+                <img src="@Model.ImagePath" alt="Lights">
+            </a>
+        </div>
+        <div id="divcontent">
+            <p id="date">@Model.CreatedDate.ToString().Split(" ")[0]</p>
+            <p id="pcontent">
+                <b>- <a asp-controller="User" asp-action="Index" asp-route-id="@Model.UserId">@Model.Users.UserName</a></b> : @Model.Content
+            </p>
+        </div>
+        @if (Model.UserId == int.Parse(User.Claims.FirstOrDefault(c => c.Type.EndsWith("ID")).Value))
+        {
+            <div id="divbutton">
+                @if (Model.Status == Status.Active)
+                {
+                    <a class="btn btn-primary" asp-controller="Image" asp-action="GetPassiveImg" asp-route-id="@Model.ID">Arşive Ekle</a>
+                }
+                else
+                {
+                    <a class="btn btn-danger" asp-controller="Image" asp-action="GetActiveImg" asp-route-id="@Model.ID">Arşivden Çıkar</a>
+                }
+                <a class="btn btn-success" asp-controller="Image" asp-action="Edit" asp-route-id="@Model.ID">Resmi Düzenle</a>
+            </div>
+        }
+    </article>
+</div>
+
+
+
+
+

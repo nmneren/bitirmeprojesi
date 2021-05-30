@@ -1,0 +1,47 @@
+﻿@model Tuple<int, int>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section HomeIndexCss{
+    <link href="~/admin/Custom/HomeIndex.css" rel="stylesheet" />
+}
+
+
+<div class="row">
+    <div class="col-md-3">
+        <a asp-controller="User" asp-action="Index" asp-area="Admin">
+            <article>
+                <div id="divimg">
+                    <img src="/uploads/DefaultProfileImage.jpeg" class="rounded-circle" alt="Lights" width="200" height="200">
+                </div>
+                <div id="divcontent">
+                    <h4>Tüm Kullanıcılar</h4>
+                    <h4>
+                        Adet - (@Model.Item1)
+                    </h4>
+                </div>
+            </article>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a asp-controller="Image" asp-action="Index" asp-area="Admin">
+            <article>
+                <div id="divimg">
+
+                    <img src="/default-image.jpg" class="rounded-circle" alt="Lights" width="200" height="200">
+
+                </div>
+                <div id="divcontent">
+                    <h4>Tüm Resimler</h4>
+                    <h4>
+                        Adet - (@Model.Item2)
+                    </h4>
+                </div>
+            </article>
+        </a>
+    </div>
+</div>
+
